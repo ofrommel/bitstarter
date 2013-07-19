@@ -14,6 +14,17 @@ app.get('/bootstrap/*', function(req, res){
     res.sendfile('./bootstrap/' + path);
 });
 
+app.get('/images/*', function(req, res){
+    path = req.params[0];
+    res.sendfile('./images/' + path);
+});
+
+app.get('/font-awesome/*', function(req, res){
+    path = req.params[0];
+    res.sendfile('./font-awesome/' + path);
+});
+
+
 /*app.get('/bootstrap.css', function(request, response) {
   data = fs.readFileSync("bootstrap.css", "utf8");
   response.send(data);
